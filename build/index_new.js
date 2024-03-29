@@ -1,7 +1,7 @@
-let minVinput = document.querySelector('#minV');
-let maxVinput = document.querySelector('#maxV');
-minVinput.value = 205;
-maxVinput.value = 253;
+// let minVinput = document.querySelector('#minV');
+// let maxVinput = document.querySelector('#maxV');
+// minVinput.value = 205;
+// maxVinput.value = 253;
 
 function DrawGraph(data1, data2) {
   am5.ready(function () {
@@ -70,7 +70,7 @@ function DrawGraph(data1, data2) {
         yAxis: yAxis,
         valueYField: 'value',
         valueXField: 'date',
-        stroke: am5.color(0x03fc13),
+        stroke: am5.color(0x9eff91),
         tooltip: am5.Tooltip.new(root, {
           labelText: '{valueY}',
         }),
@@ -83,7 +83,7 @@ function DrawGraph(data1, data2) {
         yAxis: yAxis,
         valueYField: 'value',
         valueXField: 'date',
-        stroke: am5.color(0xf403fc),
+        stroke: am5.color(0x8cb1ff),
         tooltip: am5.Tooltip.new(root, {
           labelText: '{valueY}',
         }),
@@ -113,8 +113,8 @@ function DrawGraph(data1, data2) {
     var rangeTime = rangeDate.getTime();
 
     // add series range
-    var seriesRangeDataItem = yAxis.makeDataItem({ value: maxVinput.value, endValue: 80 });
-    var seriesRangeDataItemLow = yAxis.makeDataItem({ value: minVinput.value, endValue: 0 });
+    var seriesRangeDataItem = yAxis.makeDataItem({ value: 80, endValue: 80 });
+    var seriesRangeDataItemLow = yAxis.makeDataItem({ value: 80, endValue: 0 });
     var series1Range = series1.createAxisRange(seriesRangeDataItem);
     var series1RangeLow = series1.createAxisRange(seriesRangeDataItemLow);
     var series2Range = series2.createAxisRange(seriesRangeDataItem);
